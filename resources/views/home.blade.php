@@ -5,6 +5,8 @@
     </x-slot> --}}
 
     <h1>Home</h1>
+
+
 </x-layouts.app>
 {{-- @endcomponent --}}
 
