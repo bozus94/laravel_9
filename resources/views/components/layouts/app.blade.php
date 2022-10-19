@@ -16,8 +16,9 @@
 
 <body>
     <x-layouts.navigation />
-    {{ $slot }}
-
+    <div class="flex items-center justify-center pt-5">
+        {{ $slot }}
+    </div>
 </body>
 
 </html>
