@@ -19,7 +19,7 @@
                     </a>
                 </div>
                 <div class="mx-auto">
-                    <div class="flex space-x-4">
+                    <div class="flex space-x-4 items-center">
                         <!-- Active: 'text-sky-600 dark:text-white', Inactive 'text-slate-400' -->
                         <a href="{{ route('home') }}"
                             class="px-3 py-2 text-sm font-medium rounded-md text-slate-400 hover:text-sky-600
@@ -46,6 +46,32 @@
                         </a>
                     </div>
                 </div>
+                <div class="ml-auto ">
+                    <div class="flex items-center space-x-4">
+                        @guest
+                        <a href="{{ route('register') }}"
+                            class=" ml-auto px-3 py-2 text-sm font-medium rounded-md text-slate-400 hover:text-sky-600
+                            {{ request()->routeIs('register') ? 'text-sky-600 dark:text-white' : 'text-slate-400' }}">
+                            Register
+                        </a>
+                        <a href="{{ route('login') }}"
+                            class=" ml-auto px-3 py-2 text-sm font-medium rounded-md text-slate-400 hover:text-sky-600
+                            {{ request()->routeIs('login') ? 'text-sky-600 dark:text-white' : 'text-slate-400' }}">
+                            Login
+                        </a>
+                        @else
+                        <form action="{{route('logout')}}" method="POST">
+                            @csrf
+                            <a href="#"
+                                class=" ml-auto px-3 py-2 text-sm font-medium rounded-md text-slate-400 hover:text-sky-600"
+                                onclick="this.closest('form').submit()">
+                                Logout
+                            </a>
+                        </form>
+                    </div>
+                    @endguest
+                </div>
+
             </div>
         </div>
     </div>
