@@ -14,11 +14,9 @@
 
 </head>
 
-<body>
+<body class="antialiased bg-slate-100 dark:bg-slate-900">
     <x-layouts.navigation />
-    <div class="flex items-center justify-center pt-5">
-        {{ $slot }}
-    </div>
+    {{ $slot }}
 </body>
 
 </html>

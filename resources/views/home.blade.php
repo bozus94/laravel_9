@@ -4,9 +4,7 @@
         Home
     </x-slot> --}}
 
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+    <h1 class="my-4 font-serif text-3xl text-center text-sky-600 dark:text-sky-500">Home</h1>
 
 </x-layouts.app>
 {{-- @endcomponent --}}
