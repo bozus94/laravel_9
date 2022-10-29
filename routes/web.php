@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\AuthenticatedUserController;
@@ -21,9 +20,9 @@ Route::delete('/blog/{post}', [PostController::class, 'delete'])->name('posts.de
 Route::get('/blog/edit/{post}', [PostController::class, 'edit'])->name('posts.edit'); */
 
 route::get('/login', [AuthenticatedUserController::class, 'login'])->name('login');
-route::post('/login', [AuthenticatedUserController::class, 'auth'])->name('login');
+route::post('/login', [AuthenticatedUserController::class, 'auth'])->name('auth');
 
 route::get('/register', [RegisteredUserController::class, 'register'])->name('register');
-route::post('/register', [RegisteredUserController::class, 'store'])->name('resgister');
+route::post('/register', [RegisteredUserController::class, 'store'])->name('resgister.store');
 
 route::post('/logout', [AuthenticatedUserController::class, 'destroy'])->name('logout');

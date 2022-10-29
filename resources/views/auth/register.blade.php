@@ -3,7 +3,7 @@
     </h1>
 
     <form class="max-w-xl px-8 py-4 mx-auto bg-white rounded shadow dark:bg-slate-800"
-        action="{{route('register')}}" method="POST">
+        action="{{route('resgister.store')}}" method="POST">
         @csrf
 
         <div class="space-y-4">

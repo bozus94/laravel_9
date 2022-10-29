@@ -2,7 +2,7 @@
     <h1 class="my-4 font-serif text-3xl text-center text-sky-600 dark:text-sky-500">Login</h1>
 
     <form class="max-w-xl px-8 py-4 mx-auto bg-white rounded shadow dark:bg-slate-800"
-        action="{{route('login')}}" method="POST">
+        action="{{route('auth')}}" method="POST">
         @csrf
 
         <div class="space-y-4">
